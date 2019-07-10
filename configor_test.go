@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/BurntSushi/toml"
-	"github.com/minitauros/configor"
+	"github.com/unitedwardrobe/configor"
 	"gopkg.in/yaml.v2"
 )
 
@@ -441,7 +441,7 @@ func TestOverwriteConfigurationWithEnvironmentWithDefaultPrefix(t *testing.T) {
 			defaultConfig.APPName = "config2"
 			defaultConfig.Hosts = []string{"http://example.org", "http://jinzhu.me"}
 			defaultConfig.DB.Name = "db_name"
-			defaultConfig.MyMap = map[string]string{"x":"y"}
+			defaultConfig.MyMap = map[string]string{"x": "y"}
 			if !reflect.DeepEqual(result, defaultConfig) {
 				t.Errorf("result should equal to original configuration")
 			}
